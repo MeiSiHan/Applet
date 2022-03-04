@@ -28,7 +28,7 @@
       </view>
     </view>
     <view class="rourou-button">
-      <button type="primary" bindtap="cellDate">立即打开</button>
+      <button type="primary" bindtap="cellDate">打卡</button>
     </view>
     <view class="rourou-date">
       <view wx:for="{{listDate}}" wx:for-index="idx" wx:for-item="itemName" wx:key="key">

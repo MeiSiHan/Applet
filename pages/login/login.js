@@ -100,6 +100,7 @@ Page({
     // clearInterval(that.data.setInter)
     var datas = that.data.date;
     var listarr = []
+    
     try {
       var value = wx.getStorageSync('celldateList')
       if (value == "") {
