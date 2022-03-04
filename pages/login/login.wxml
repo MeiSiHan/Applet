@@ -8,7 +8,7 @@
       <block wx:if="{{!hasUserInfo}}">
         <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile" type="primary"> 获取头像昵称1 </button>
         <button wx:else open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-        <button open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+        <!-- <button open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button> -->
       </block>
       <block wx:else>
         <image bindtap="bindViewTap" class="rourou-userinfoicon" src="{{userInfo.avatarUrl}}" mode="cover"></image>
@@ -30,11 +30,11 @@
     <view class="rourou-button">
       <button type="primary" bindtap="cellDate">打卡</button>
     </view>
-    <view class="rourou-date">
+    <view class="rourou-list">
       <view wx:for="{{listDate}}" wx:for-index="idx" wx:for-item="itemName" wx:key="key">
-        打卡时间: {{itemName.nowTime}}
+        <text class="rourou-list-label">打卡时间: </text><text class="rourou-list-time">{{itemName.nowTime}}</text><text class="rourou-list-day">{{itemName.nowDay}}</text>
       </view>
     </view>
   </view>
-<map name="local" class="mapbox"></map>
+<map name="local" class="mapbox" show-location="true" show-compass="true"></map>
 </view>

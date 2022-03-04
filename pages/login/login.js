@@ -2,7 +2,7 @@ const app = getApp();
 let timeset = "111"
 Page({
   data: {
-    title_text: "欢迎登录卡卡上班",
+    title_text: "欢迎进入打卡系统",
     date: {
       "nowTime": "", //当前时间
       "nowDay": "",
@@ -133,16 +133,17 @@ Page({
   },
 onceList(){
   var that=this;
+  var listarr=[];
   try {
     var value = wx.getStorageSync('celldateList')
     if (value == "") {
       listarr = []
     } else {
       listarr = JSON.parse(value)
+      that.setData({
+        listDate: listarr
+      })
     }
-    that.setData({
-      listDate: listarr
-    })
   } catch (e) {}
 },
 
