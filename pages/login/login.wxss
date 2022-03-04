@@ -1,0 +1,60 @@
+/* pages/login/login.wxss */
+.rourou-box{
+  height: 100%;
+  width: 100%;
+}
+.rourou-h1{
+  font-size: 20px;
+  color: #333333;
+  /* background:-webkit-linear-gradient(90deg,rgb(11, 212, 27),#333333); */
+  text-align: center;
+  margin:0 auto;
+  width: atuo;
+}
+input{
+  border:1px solid #16afc4;
+  display: inline-block;
+  vertical-align: middle;
+}
+.rourou-li-row{
+  line-height: 50px;
+  display: flex;
+  flex-direction:row;
+  align-items: center;
+}
+.rourou-button{
+  height: 80rpx;
+  margin:20rpx 0;
+}
+.rourou-date{
+  line-height: 60rpx;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  font-size: 40rpx;
+}
+.rourou-userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #aaa;
+  margin: 30rpx;
+}
+.rourou-userinfoicon{
+  width: 120rpx;
+  height:120rpx;
+  border-radius: 50%;
+}
+.rourour-scrolly{
+  word-wrap:break-word;
+  word-break:normal; 
+  width: 100%;
+  height:400rpx;
+}
+.mapbox{
+  margin-top: 100px;
+}
+.mapbox{
+  width: 100%;
+  height: 500px;
+}

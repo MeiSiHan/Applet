@@ -1,0 +1,40 @@
+<!--pages/login/login.wxml-->
+<view class="rourou-box">
+  <view class="rourou-conten">
+    <view class="rourou-h1">
+      <text>{{title_text}}</text>
+    </view>
+    <view class="rourou-userinfo">
+      <block wx:if="{{!hasUserInfo}}">
+        <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile" type="primary"> 获取头像昵称1 </button>
+        <button wx:else open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+        <button open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+      </block>
+      <block wx:else>
+        <image bindtap="bindViewTap" class="rourou-userinfoicon" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+        <scroll-view class="rourour-scrolly" scroll-y="true">{{userInfostr}}</scroll-view>
+      </block>
+    </view>
+    <view class="rourou-li-row">
+      <text>今天小愿望：</text><input type="text" style="width: 60%;" />
+    </view>
+    <view class="rourou-date">
+      <view class="rourou-date-day">
+        <text>{{date.nowDay}}</text>
+      </view>
+      <view class="rourou-date-time">
+        <text>当前时间：</text><text>{{date.nowTime}}</text>
+      </view>
+    </view>
+    <view class="rourou-button">
+      <button type="primary" bindtap="cellDate">立即打开</button>
+    </view>
+    <view class="rourou-date">
+      <view wx:for="{{listDate}}" wx:for-index="idx" wx:for-item="itemName" wx:key="key">
+        打卡时间: {{itemName.nowTime}}
+      </view>
+    </view>
+  </view>
+<map name="local" class="mapbox"></map>
+</view>
