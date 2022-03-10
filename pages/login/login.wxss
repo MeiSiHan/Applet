@@ -37,6 +37,10 @@ input{
   align-items: center;
   font-size: 40rpx;
 }
+.rourou-data-label{
+  display:inline-block;
+  width:200rpx;
+}
 .rourou-userinfo {
   display: flex;
   flex-direction: column;
@@ -44,9 +48,26 @@ input{
   color: #aaa;
   margin: 30rpx;
 }
+.rourou-listbox{
+  max-height:400rpx;
+  width:100%;
+  padding:10rpx 60rpx;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
 .rourou-list{
   line-height: 50rpx;
   font-size: 30rpx;
+}
+.rourou-listli{
+  height: 100rpx;
+  box-shadow: #f34e01;
+  border: 1px solid#ddd;
+  padding:10rpx 60rpx;
+  border-bottom: 0;
+}
+.rourou-list :last-child.rourou-listli{
+  border-bottom: 1px solid#ddd;
 }
 .rourou-list .rourou-list-label{
   color: #333;
@@ -56,6 +77,9 @@ input{
   color: #f34e01;
   width: 100rpx;
   margin: 0 10rpx;
+}
+.rourou-list-day{
+  color:rgb(136, 128, 128);
 }
 .rourou-userinfoicon{
   width: 120rpx;

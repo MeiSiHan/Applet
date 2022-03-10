@@ -24,15 +24,17 @@
         <text>{{date.nowDay}}</text>
       </view>
       <view class="rourou-date-time">
-        <text>当前时间：</text><text>{{date.nowTime}}</text>
+        <text class="rourou-data-label">当前时间：</text><text>{{date.nowTime}}</text>
       </view>
     </view>
     <view class="rourou-button">
       <button type="primary" bindtap="cellDate">打卡</button>
     </view>
-    <view class="rourou-list">
-      <view wx:for="{{listDate}}" wx:for-index="idx" wx:for-item="itemName" wx:key="key">
-        <text class="rourou-list-label">打卡时间: </text><text class="rourou-list-time">{{itemName.nowTime}}</text><text class="rourou-list-day">{{itemName.nowDay}}</text>
+    <view class="rourou-list rourou-listbox">
+      <view wx:for="{{listDate}}" wx:for-index="idx" wx:for-item="itemName" wx:key="key" class="rourou-listli">
+        <view><text class="rourou-list-label">打卡时间: </text><text class="rourou-list-time">{{itemName.nowTime}}</text></view>
+        <view class="rourou-list-day">{{itemName.nowDay}}</view>{{toTime}}
+        <!-- <button type="primary" size="20" style="width:250rpx;">删除</button> -->
       </view>
     </view>
   </view>

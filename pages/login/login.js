@@ -78,8 +78,10 @@ Page({
     const minute = date.getMinutes()
     const second = date.getSeconds()
     const week = new Array("星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六")
+
     const nowDayto = year + " 年 " + month + " 月 " + days + " 日 " + week[day]
-    const nowTimes = padaDate(hour) + " : " + padaDate(minute) + " :" + padaDate(second)
+    var timestr=(hour<13)? "上午":"下午"
+    const nowTimes = padaDate(hour) + " : " + padaDate(minute) + " :" + padaDate(second)+"  "+timestr
     this.setData({
       date: {
         nowTime: nowTimes,
@@ -87,6 +89,9 @@ Page({
         timeStamp: timestamp
       }
     })
+  },
+  toTime(data){
+    return "转换"
   },
   // 事件处理函数
   bindViewTap() {
